@@ -1,0 +1,31 @@
+h1 { font-family: fantasy ; }
+
+.sitelink {
+    border: 2px solid darkolivegreen;
+    background-color: lightgoldenrodyellow;
+    width: 250px;
+}
+
+.list-mark { list-style-type: circle; }
+
+.sitelink a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sitelink a:link { color: black; }
+.sitelink a:visited { color: black; }
+.sitelink a:hover {
+    text-shadow: 0.5px 0.5px 1px black;
+    font-style: italic;
+}
+
+.highlight { 
+    color: green;
+    font-family: 궁서체;
+    font-weight: bolder;
+    text-decoration-line: underline ;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+ }
