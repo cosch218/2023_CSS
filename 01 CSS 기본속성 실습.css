@@ -1,21 +1,23 @@
-h1 { font-family: fantasy ; }
+.font-title { 
+    font-family: fantasy; 
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
 
-.sitelink {
+.list-box {
     border: 2px solid darkolivegreen;
     background-color: lightgoldenrodyellow;
-    width: 250px;
+    width: 240px;
 }
 
-.list-mark { list-style-type: circle; }
+.list-deco { list-style-type: circle; }
 
-.sitelink a {
+.list-deco a {
     text-decoration: none;
     font-weight: bold;
+    color: black;
 }
 
-.sitelink a:link { color: black; }
-.sitelink a:visited { color: black; }
-.sitelink a:hover {
+.list-deco a:hover {
     text-shadow: 0.5px 0.5px 1px black;
     font-style: italic;
 }
