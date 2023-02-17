@@ -1,0 +1,58 @@
+.list-title {
+    padding: 20px 0;
+    font-size: 150%;
+    text-align: center;
+    background-color: tomato;
+}
+
+.list {
+    border: 3px dashed black;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-bottom: 100px;
+    
+}
+
+.list p {
+    background-color: lightyellow;
+    font-size: 90%;
+    padding: 10px 10px;
+    margin: 10px 0;
+}
+
+.link-home {
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 130px;
+    padding: 10px 0;
+}
+
+.link-home:hover {
+    background-color: rgb(87, 173, 207);
+}
+
+.link-home a {
+    text-decoration: none;
+    color: black;
+}
+
+.link-subject {
+    background-color: white;
+    text-align: center;
+    width: 100px;
+}
+
+.link-subject a {
+    font-family: 나눔바른고딕;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0;
+}
+
+.link-subject a:hover {
+    color: rgb(52, 190, 52);
+    font-weight: bold;
+    border-bottom: 5px solid rgb(52, 190, 52);
+}
