@@ -1,0 +1,112 @@
+/* 결합 선택자 */
+.outbox p {
+    background-color: yellow;
+}
+
+.outbox >p {
+    background-color: lightgreen;
+}
+
+
+
+/* 동위/형제 선택자 */
+.sibling ~p {
+    background-color: lavender;
+}
+
+/* +를 사용할 때는 바로 뒤에 있는 태그만 찾을 수 있다 */
+/* +a는 바로 뒤에 있지 않기에 찾을 수 없다 */
+.sibling +a {
+    background-color: plum;
+}
+
+.sibling +p {
+    background-color: powderblue;
+}
+
+/* .test로만 선택자를 선택하면 .sibling ~p 의 우선순위로 인해 화면에 출력되지 않는다 */
+/* 적용범위가 좁으면 좁을수록 우선순위가 올라감  */
+.sibling ~.test {
+    background-color: lightpink;
+}
+
+
+
+/* 동적 의사 클래스 */
+.input-focus:focus {
+    background-color: coral;
+    color: antiquewhite;
+}
+
+.input-focus:focus +p {
+    color: blue;
+}
+
+
+
+/* 상태 의사 클래스 */
+.state >input:checked +span {
+    color: gray;
+}
+
+.state >input:disabled +span {
+    text-decoration: line-through 1px solid;
+}
+
+
+
+/* 구조 의사 클래스 */
+.menu-list >li:first-child {
+    background-color: cornflowerblue;
+}
+
+.menu-list >li:last-child {
+    background-color: skyblue;
+}
+
+.menu-list >li:nth-child(2n) {
+    color: blueviolet;
+}
+
+.menu-list >li:nth-last-child(2) {
+    background-color: bisque;
+}
+
+.table-color {
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+/* 자식이므로 tbody 추가 */
+.table-color >tbody >tr:nth-child(5) {
+    background-color: olive;
+}
+
+/* 자손이므로 tbody 무시 */
+.table-color tr:first-child {
+    background-color: darkkhaki;
+}
+
+/* 위의 선택자 중 하나를 이용해서 짝수번째 배경색만 바꾸기 */
+.table-color >tbody >tr:nth-child(2n) {
+    background-color: yellow;
+}
+
+/* of-type */
+.child-tag >p:first-child {
+    color: blue;
+}
+.child-tag >h1 {
+    color: brown;
+}
+
+/* 클래스를 지정하고 자손으로 타입 찾기 */
+.of-type p:first-of-type {
+    color: red;
+}
+
+/* 클래스를 지정하고 자식으로 타입 찾기 */
+/* first-child와 동일한 역할 */
+.of-type >p:first-of-type {
+    background-color: antiquewhite;
+}

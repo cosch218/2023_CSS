@@ -1,0 +1,24 @@
+.list {
+    border: 3px solid salmon;
+}
+
+.list >ul {
+    list-style: none;
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.hashtag {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.hashtag >span {
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 0 5px;
+}

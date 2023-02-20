@@ -1,0 +1,47 @@
+.bookmark {
+    background-color: salmon;
+    border: 3px solid black;
+    padding: 10px 10px;
+    width: 150px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.bookmark p {
+    text-align: left;
+    margin-top: 0;
+}
+
+.bookmark ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.bookmark a {
+    text-decoration: none;
+    color: black;
+    margin: auto;
+}
+
+.bookmark a:hover {
+    color: white;
+    margin: auto;
+
+}
+
+
+ul.list {
+    overflow: auto;
+    padding: 20px;
+    list-style: none;
+    background-color: lightgoldenrodyellow;
+}
+
+ul.list li {
+    float: left;
+    background-color: seagreen;
+    padding: 15px;
+}
