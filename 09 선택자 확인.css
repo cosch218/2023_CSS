@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+.header {
+    background-color: rgb(182, 255, 231);
+    text-align: center;
+    padding: 50px;
+}
+
+
+/* nav -메뉴 */
+.nav {
+    overflow: auto;
+    background-color: aquamarine;
+    padding-bottom: 15px;
+
+}
+
+.nav >ul {
+    list-style: none;
+}
+
+.nav >ul >li {
+    float: left;
+    border-right: 2px solid black ;
+    padding: 0 10px;
+}
+
+.nav >ul >li:last-child {
+    border: none;
+}
+
+.nav >ul >li >a {
+    text-decoration: none;
+}
+
+
+/* main - 메인 */
+.main {
+    background-color: mediumaquamarine;
+    padding: 5px;
+    width: 800px;
+    /* 최소값을 지정해주면 컨텐츠의 내용이 없을 때 크키가 됨*/
+    /* height에 기본적으로 auto가 들어가있기 때문에 컨텐츠의 내용이 많으면 자동으로 늘어난다.*/
+    min-height: 800px;
+    margin: auto;
+}
+
+
+/* footer - 푸터 */
+.footer {
+    background-color: rgb(21, 177, 125);
+    padding: 50px;
+    text-align: center;
+}

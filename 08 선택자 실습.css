@@ -1,24 +1,60 @@
-.list {
+/* 선택자를 이용하여 div로 나눠진 태그들 따로 선택 */
+.dictionary {
     border: 3px solid salmon;
 }
 
-.list >ul {
+.dictionary >ul {
     list-style: none;
 }
 
-.list a {
+.dictionary a {
     text-decoration: none;
 }
 
-.hashtag {
+.hashtag-inline {
     text-align: right;
     margin-top: 20px;
 }
 
-.hashtag >span {
+.hashtag-inline >span {
     background-color: blue;
     color: white;
     border-radius: 15px;
     padding: 5px 10px;
     margin: 0 5px;
+}
+
+/* 만약 span태그 대신 블록 속성인 ul과 li태그를 사용했을 땐
+.hashtag에 text-align: right; 값 주는 것 말고도
+.hashtag >ul >li에 display: inline; 또는 inline-block; 값을 주고
+float: right; 값을 줘도 된다. */
+
+.hashtag-block >ul {
+    list-style: none;
+    float: right;
+}
+
+.hashtag-block li {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+
+
+
+
+/* 의사 클래스 활용하기 */
+.notice >p::after {
+    content: "N";
+    background-color: orange;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 0 4px;
 }
