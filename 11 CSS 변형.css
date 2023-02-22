@@ -1,0 +1,301 @@
+.my-box {
+    width: 150px;
+    height: 150px;
+    background-color: lightpink;
+}
+
+.trans {
+    transform: translate(160px, -10px);
+}
+
+.rotate {
+    transform: rotate(30deg);
+}
+
+.transform {
+    transform: translate(130px, 0) 
+                scale(0.8)
+                skewX(20deg);
+}
+
+.transform-3d {
+    transform: rotateX(60deg) rotateY(30deg)
+                translate3d(0,0,20px);
+}
+
+/* 전환이 될 방법을 알려줘야 한다. (hover 등) */
+.transition:hover {
+    background-color: lightskyblue;
+    transform: scale(1.5);
+    width: 200px;
+    transition: background-color 1s, width 1s transform 1s;
+}
+
+.transition {
+    transition: all 1s;
+
+}
+
+.transform-transition:hover {
+    transform: translate(100px, 0) rotate(90deg);
+    transition: transform 1s;
+    transition-delay: 0.5s;
+}
+
+.transform-transition {
+    transition: transform 1s;
+}
+
+.linear-transition:hover {
+    transform: rotate(90deg);
+    transition: all 1s;
+    transition-timing-function: linear;
+}
+
+input[type="checkbox"]:checked +span {
+    color: blue;
+    transition: color 1s;
+}
+
+input[type="checkbox"] +span {
+    transition: color 1s;
+}
+
+.after-transition p::after {
+    content: "새로운 내용이 나타납니다.";
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.after-transition p:hover:after {
+    content: "새로운 내용이 나타납니다.";
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.content-container {
+    width: 300px;
+    height: 300px;
+    background-color: darkgrey;
+    overflow: hidden;
+}
+
+.content-container >.img {
+    background-image: url(./img/bird.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-container >.img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.content-container >.img {
+    transition: all 0.5s;
+}
+
+.content-container2 {
+    width: 300px;
+    height: 300px;
+    background-color: darkgrey;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.content-container2 >.img {
+    background-image: url(./img/bird.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-container2 >.img:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.content-container2 >.img {
+    transition: all 0.5s;
+}
+
+.content-container >.black {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 140px;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+
+.content-container:hover >.black {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.content-container >.img2 {
+    background-image: url(./img/sea.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
+
+.animation {
+    animation: movingback;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    from { transform: translate(0,0); }
+    to { transform: translate(100px,0); }
+}
+
+@keyframes movingback {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(200px,0); }
+    100% { transform: translate(0,0); }
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.animation-box {
+    animation: movingbox 4s infinite;
+    color: ;
+}
+
+@keyframes movingbox {
+    0% {}
+    20% {transform: rotate(90deg);
+        border-top-left-radius: 50%; 
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        background-color: lightseagreen;}
+    40% {transform: rotate(180deg);
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        background-color: lightsalmon;}
+    60% {transform: rotate(270deg);
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 0;
+        background-color:lightskyblue;}
+    80% {transform: rotate(360deg);
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius:50%;
+        background-color: mediumpurple;}
+    100% {transform: rotate(360deg);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius:0%;
+        background-color:lightpink;}
+}
+
+.text {
+    z-index: 10;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 65px;
+}
+
+.filter {
+    width: 300px;
+    transition: all 1s;
+}
+
+.filter:hover {
+    filter: blur(4px) brightness(0.8);
+    transition: all 1s;
+}
+
+.image-list >.content-image {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+.image-list >.content-image:nth-child(1) {
+    background-image: url(./img/leaves.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image-list >.content-image:nth-child(1):hover {
+    filter: grayscale(100%);
+}
+
+.image-list >.content-image:nth-child(2) {
+    background-image: url(./img/zebra.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image-list >.content-image:nth-child(2):hover {
+    filter: sepia(100%);
+}
+
+.image-list >.content-image:nth-child(3) {
+    background-image: url(./img/flowers.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image-list >.content-image:nth-child(3):hover {
+    filter: contrast(70%);
+}
+
+.pencil {
+    background-image: url(./img/pencil-solid.svg);
+    width: 50px;
+    height: 50px;
+    animation: rotatepencil 1s infinite;
+}
+
+@keyframes rotatepencil {
+    0% {transform: rotate(0);}
+    15% {transform: rotate(-50deg);}
+    65% {transform: rotate(50deg);}
+    75% {transform: rotate(0);}
+    100% {transform: rotate(0);}
+}
+
+.mix-blend {
+    position: fixed;
+    top: 0;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+body {
+    background-color: white;
+}
