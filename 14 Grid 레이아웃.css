@@ -1,0 +1,170 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+}
+
+.grid-box >p {
+    background-color: antiquewhite;
+}
+
+.grid-box >:first-child {
+    background-color: burlywood;
+}
+
+.grid-box2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+
+}
+
+.grid-box2 >p {
+    background-color: antiquewhite;
+}
+
+.grid-box2 >:first-child {
+    background-color: burlywood;
+}
+
+.grid-box3 {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+
+}
+
+.grid-box3 >p {
+    background-color: antiquewhite;
+}
+
+.grid-box3 >:first-child {
+    background-color: burlywood;
+}
+
+
+.grid-box-row {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* 높이 간격을 따로 주고 싶을 때, row를 이용 */
+    grid-template-rows: 1fr 1fr 2fr;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+}
+
+.grid-box-row >p {
+    background-color: antiquewhite;
+    
+}
+
+.grid-box-row >p:first-child {
+    padding: 30px 0;
+    background-color: burlywood;
+
+}
+
+.grid-box-merge {
+    display: grid;
+    grid-auto-rows: 1fr;
+    /* 
+    template : 입력 값만큼 크기 지정 (그 외의 크기는 auto)
+    auto : 모든 row의 auto를 어떻게 할지 지정
+    */
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid gray;
+    margin-bottom: 20px;
+}
+
+.grid-box-merge >p {
+    background-color: antiquewhite;
+}
+
+.grid-box-merge >p:nth-child(1) {
+    grid-column: 1/4;
+    background-color: burlywood;
+    border: 1px dashed chocolate;
+}
+
+.grid-box-merge >p:nth-child(2)
+{
+    grid-row :2/4;
+    background-color: burlywood;
+    border: 1px dashed chocolate;
+}
+
+.grid-box-merge >p:nth-child(3) {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    border: 1px dashed chocolate;
+
+}
+
+.grid-box-merge >p:nth-child(4) {
+    grid-column: 2/4;
+    /* 원래 아이템4가 위치했던 그리드는 공백이 되고 아이템5는 아래로 내려감*/
+    border: 1px dashed chocolate;
+}
+
+.grid-box-merge >p:nth-child(5) {
+    grid-row: 4;
+    /* 아래로 밀려났던 아이템5가 아이템4의 원래 위치로 이동*/
+    border: 1px dashed chocolate;
+}
+
+
+
+/* grid 실습 */
+.grid-box-ad {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5px;
+    width: 400px;
+}
+
+.grid-box-ad >.content {
+    text-align: center;
+    height: 225px;
+}
+
+.grid-box-ad >.content >a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-box-ad >.content:hover {
+    text-decoration-line: underline;
+}
+
+.grid-box-ad >.content:hover >a >.item-img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.grid-box-ad > .content >a >.item-img {
+    width: 130px;
+    height: 177px;
+    transition: all 0.3s
+}
+
+
+.grid-box-ad >.content >a >h4 {
+    padding: 0;
+    margin: 0;
+    margin-top: 3px;
+}
+
+.grid-box-ad >.content >a >p {
+    padding: 0;
+    margin: 0;
+}

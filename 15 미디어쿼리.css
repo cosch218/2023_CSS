@@ -1,0 +1,41 @@
+/* pc 기준으로 사용 */
+body {
+    background-color: lightsalmon;
+}
+
+.grid-box-media {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: space-between;
+}
+
+.grid-box-media >.content {
+    margin: 3px;
+    /* 컨텐츠 값이 없으므로 높이값만 지정 */
+    /* 컨텐츠 값이 있을 때 자동으로 높이가 조절되게 하고 싶다면 min-height 사용 */
+    height: 300px;
+    background-color: white;
+}
+
+/* 미디어쿼리는 pc보다 작은 스크린에 디자인을 적용할 때 사용 */
+/* max-width:480px => 480px보다 작을 때 적용 */
+@media screen and (max-width:479px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .grid-box-media {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 가운데 크기를 작성해줄 때는 min-width 와 max-width 둘 다 사용하여 and로 연결한다. */
+@media screen and (min-width:480px) and (max-width:767px) {
+    body {
+        background-color: khaki;
+    }
+
+    .grid-box-media {
+        grid-template-columns: 1fr 1fr;
+    }
