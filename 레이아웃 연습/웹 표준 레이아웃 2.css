@@ -1,0 +1,119 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    background-color: rgb(213, 232, 238);
+    width: 1000px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+}
+
+
+
+/* header */
+.head {
+    height: 150px;
+    background-color: rgb(17, 55, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* nav */
+.nav {
+    height: 80px;
+    background-color: rgb(41, 85, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* main-float */
+.main-float {
+    overflow: auto;
+    background-color: rgb(73, 114, 190);
+}
+
+.main-float >.side-left {
+    float: left;
+    box-sizing: border-box;
+    width: 250px;
+    height: 400px;
+    border-right: 2px solid rgb(41, 85, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-float >.contents {
+    margin: 0 250px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 400px;
+    border-right: 2px solid rgb(41, 85, 167);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-float >.side-right {
+    float: right;
+    box-sizing: border-box;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* main-grid */
+.main-grid {
+    clear: both;
+    display: grid;
+    grid-template-columns: 250px 500px 250px;
+    height: 400px;
+    background-color: rgb(115, 154, 224);
+}
+
+.main-grid >.side-left {
+    border-right: 2px solid rgb(41, 85, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-grid >.contents {
+    border-right: 2px solid rgb(41, 85, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-grid >.side-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* footer */
+.footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 85, 167);
+}

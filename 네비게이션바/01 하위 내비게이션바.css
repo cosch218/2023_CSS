@@ -1,0 +1,49 @@
+body, ul {padding: 0; margin: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+
+
+
+.nav >.gnb {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightslategray;
+}
+
+.nav >.gnb .gnb-sub {
+    /*position 설정 안하면 gnb의 li들 위치가 움직임*/
+    position: absolute; 
+    /*left:0;을 사용하면 모든 메뉴가 왼쪽 끝에 겹쳐서 뜨게 됨*/
+    margin-left: -20px;
+    /*display: none; 또는 opacity: 0; 사용*/
+    /*하지만 애니메이션을 주고 싶다면 visibility와 opacity 사용*/
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    padding: 10px 5px;
+}
+
+/*상위메뉴에 마우스를 올렸을 때 전환효과*/
+.nav >.gnb >li:hover >.gnb-sub {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transition: all 1s;
+}
+
+/*하위메뉴에 마우스를 올렸을 때 전환효과*/
+.nav >.gnb >li >.gnb-sub >li:hover {
+    border-bottom: 2px solid silver;
+    transition: all 0.3s;
+}
+.nav >.gnb >li >.gnb-sub >li {
+    box-sizing: border-box;
+    height: 25px;
+}
+
+
+
+.main >.content1 {
+    background-color: lightblue;
+    height: 100vh;
+}

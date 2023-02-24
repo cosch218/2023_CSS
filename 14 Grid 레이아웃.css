@@ -74,11 +74,11 @@ body {
 .grid-box-merge {
     display: grid;
     grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     /* 
     template : 입력 값만큼 크기 지정 (그 외의 크기는 auto)
     auto : 모든 row의 auto를 어떻게 할지 지정
     */
-    grid-template-columns: repeat(3, 1fr);
     border: 2px solid gray;
     margin-bottom: 20px;
 }

@@ -1,0 +1,50 @@
+body, ul {padding: 0; margin: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+
+/* 1.nav-gnb부터 정리 */
+.nav >.gnb {
+    display: flex;
+    background-color: lightsalmon;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+/* 2.nav-gnb의 gnb-sub 정리 */
+.nav >.gnb .gnb-sub {
+    position: absolute;
+    margin-top: 10px;
+    /* 3.visibility와 opacity 설정해서 애니메이션 설정*/
+    visibility: hidden;
+}
+.nav >.gnb .gnb-sub >li {
+    margin: 4px 0;
+}
+
+/* 4.애니메이션을 위해 li요소가 아닌 nav-gnb에 :hover 상태값 설정 */
+.nav >.gnb:hover .gnb-sub {
+    visibility: visible;
+    /* 8. 7단계때문에 하위메뉴가 보이지 않게된 것을 수정 */
+    z-index: 10;
+}
+
+/*5. 상위메뉴에 마우스 올리면 메뉴 이름 강조 효과*/
+.nav >.gnb >li:hover >a {
+    color: white;
+    font-weight: bold;
+}
+
+/* 6. nav가 hover상태일 때 백그라운드 컬러 나타나게 설정 */
+.background {
+    background-color: antiquewhite;
+    height: 0px;
+    /* 7. 하위메뉴가 나타날 때 main이 밀린 채로 화면에 출력하지 않게 position 설정*/
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+}
+.nav:hover +.background {
+    height: 80px;
+    transition: all 0.2s;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 표준 레이아웃 2</title>
+    <link rel="stylesheet" href="./웹 표준 레이아웃 2.css">
+</head>
+<body>
+    <div class="wrap">
+        <!-- head start -->
+        <header class="head">HEADER</header>
+        <!-- head end -->
+
+        <!-- nav start -->
+        <nav class="nav">NAV</nav>
+        <!-- nav end -->
+
+        <!-- main-float start -->
+        <main class="main-float">
+            <aside class="side-left">FLOAT<br>LEFT-ASIDE</aside>
+            <section class="side-right">FLOAT<br>RIGHT-ASIDE</section>
+            <aside class="contents">
+                FLOAT<br>CONTENTS
+                <p style="font-size: 1rem; font-weight: 100;">
+                    <u>형제 태그에 float-left와 float-right가 같이 있을 경우</u> <br>
+                    가운데 위치할 태그는 <br>
+                    float-left 태그와 float-right 태그 <br>
+                    다음에 작성해야한다.
+                </p>
+            </aside>
+        </main>
+        <!-- main-float end -->
+
+        <!-- main-grid start -->
+        <main class="main-grid">
+            <aisde class="side-left">GRID<br>LEFT-ASIDE</aisde>
+            <section class="contents">GRID<br>CONTENTS</section>
+            <aside class="side-right">GRID<br>RIGHT-ASIDE</aside>
+        </main>
+        <!-- main-grid end -->
+
+        <!-- footer start -->
+        <footer class="footer">FOOTER</footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>

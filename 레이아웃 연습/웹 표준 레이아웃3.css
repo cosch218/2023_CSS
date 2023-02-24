@@ -1,0 +1,130 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* wrap-float */
+.wrap-float {
+    max-width: 1000px;
+    margin: auto;
+    background-color: lavender;
+    font-size: 3rem;
+    overflow: auto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*float와 margin 사용 : 하나의 크기가 고정, 나머지 크기 유동적일 때*/
+.wrap-float >.aside {
+    float: left;
+    width: 200px;
+    height: 500px;
+    background-color: rebeccapurple;
+}
+
+.wrap-float >.main {
+    margin-left: 200px;
+    height: 500px;
+}
+
+.wrap-float >.main >.head {
+    height: 100px;
+    background-color: rgb(133, 82, 184);
+}
+
+.wrap-float >.main >.content {
+    height: 320px;
+    background-color: rgb(161, 117, 206);
+}
+
+.wrap-float >.main >.footer {
+    height: 80px;
+    background-color: rgb(182, 145, 219);
+}
+
+
+
+
+
+/* wrap-grid */
+.wrap-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.wrap-grid >.aside {
+    background-color: rebeccapurple;
+}
+
+
+.wrap-grid >.main {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.wrap-grid >.main >.head {
+    background-color: rgb(133, 82, 184);
+}
+
+.wrap-grid >.main >.content {
+    background-color: rgb(161, 117, 206);
+}
+
+.wrap-grid >.main >.footer {
+    background-color: rgb(182, 145, 219);
+}
+
+
+
+
+
+/* wrap-float2 */
+/*두개의 내용에 각각 float를 사용해서 크기를 고정*/
+.wrap-float2 {
+    width: 1000px;
+    background-color: lavender;
+    margin: auto;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrap-float2 >.aside {
+    float: left;
+    width: 200px;
+    height: 500px;
+    background-color: rebeccapurple;
+}
+
+.wrap-float2 >.main {
+    float: left;
+    width: 800px;
+}
+
+.wrap-float2 >.main >.head {
+    height: 100px;
+    background-color: rgb(133, 82, 184);
+}
+
+.wrap-float2 >.main >.content {
+    height: 320px;
+    background-color: rgb(161, 117, 206);
+}
+
+.wrap-float2 >.main >.footer {
+    height: 80px;
+    background-color: rgb(182, 145, 219);
+}

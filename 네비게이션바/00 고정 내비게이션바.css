@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap
+
+.header {
+    background-color: slateblue;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.header >.nav >ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.header >.nav >ul >li >a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*고정 내비게이션 바를 사용흘 때는 컨텐츠가 보여질 공간 확보가 중요*/
+.main >.content1 {
+    /*브라우저 높이 비율에 따라서 화면을 출력하고 싶을 때 사용*/
+    height: 100vh;
+    padding-top: 150px;
+    background-color: rgb(155, 142, 235);
+}
+
+.main >.content2 {
+    height: 100vh;
+    background-color: rgb(187, 177, 250);
+
+}
+
+.footer {
+    height: 100px;
+    background-color: slateblue;
+}

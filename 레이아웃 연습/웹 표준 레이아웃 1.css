@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    width: 1000px;
+    background-color: antiquewhite;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* header */
+.head {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(64, 87, 25);
+    color: rgb(157, 180, 116);
+    /*텍스트 줄 간격을 조정해서 글자 위치 수정*/
+    line-height: 200px;
+}
+
+
+
+/* nav */
+.nav {
+    width: 100%;
+    height: 100px;
+    background-color: darkolivegreen;
+    color: rgb(157, 180, 116);
+    /*태그를 넣어서 정렬할 때 - padding 사용*/
+    /*nav의 크기가 지정되어 있을 때 계산의 편의를 위해 border-box로 바꿔 진행*/
+    /*또는 패딩 말고 안에 들어간 태그를 flex로 display 해도 된다*/
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
+
+
+/* main-float */
+.main-float {
+    overflow: auto;
+}
+
+.main-float >.aside {
+    float: left;
+    width: 300px;
+    height: 500px;
+    background-color: olivedrab;
+    color: rgb(194, 218, 144);
+}
+
+.main-float >.content {
+    margin-left: 300px;
+    height: 500px;
+    background-color: rgb(134, 168, 65);
+    color: rgb(202, 228, 151);
+}
+
+
+
+/* main-grid */
+.main-grid {
+    /*float를 사용하였다면 clear를 통해 속성 제거*/
+    clear: both;
+    display: grid;
+    grid-template-columns: 300px 700px;
+    height: 500px;
+}
+
+.main-grid >.aside {
+    background-color: rgb(134, 168, 65);
+    color: rgb(202, 228, 151);
+}
+
+.main-grid >.content {
+    background-color: olivedrab;
+    color: rgb(194, 218, 144);
+}
+
+
+
+/* footer */
+.footer {
+    height: 200px;
+    background-color: rgb(187, 214, 132);
+    color: olivedrab;
+    /*태그를 넣어서 정렬할 때 - display: flex; 사용*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
